@@ -1,0 +1,52 @@
+Changes are Aru's unless noted.
+2005-10-13:
+	Fix to map makefile
+
+2005-10-09:
+        Fixed a cart-dupe bug in char-server, and added new feature:
+         set max_connect_users to a negative value to allow only GMs of
+         the level configured to bypass the limit in.
+
+2005-10-08:
+	Login server added but in a different folder called login_sql/
+	has its own makefile, but can be compiled in the same root folder
+	this is our last fix for the login server, and will be converting to EAPP
+	since that is where i've done most of my work =D
+	
+	expect better performance, and real help from a real programmer Shinomori and Arutema.
+	(posted by CuTeBoi(
+
+2005-10-04:
+	Login server added to the branch, and cleaned up the int_login.c and main.c (CuTeBoi)
+
+2005-09-23:
+	Char-server now reads account and char ger_vras from different 
+		tables, allowing us to use innodb foreign keys to keep 
+		the reg_value table clean. (Cuteboi)
+	Removed non-compileable login-server, hopefully tomorrow i'll 
+		have somethign working up. (Aru)	
+
+2005-09-21:
+	Added new tables and new options for the inter_athena.conf
+		account_reg_db and char_reg_db
+
+2005-09-19:
+	Added the dbaccess.c/h files needed to compile the login-server
+	Removed text item and mob DBs. We use SQL dbs, and don't really 
+		support text DBs.
+	Added the gm_made to all item structs so we can track the GM made items (cuteboi)
+	
+
+2005-09-18:
+	Commited several changes, see 
+	http://www.clownphobia.com/forum/index.php?showforum=45
+	for more info.
+
+2005-09-13:
+	Fixed up the Makefile.
+	Fixed a plagiarism bug.
+	Fixed Killer Mantis, Various Jur not causing bleeding.
+	Changed Autocasts, damage return to match stable.	
+	
+2005-09-11:
+	Removed the obsolete Clownphobia branch and added a working one {Aru}

@@ -1,0 +1,542 @@
+// NPCs for newer headgears
+// some of these are my own, some are copy-pasted from stable. it's a bit of a jumble ATM
+
+//-------------------------------------------------------------------------------------------------
+//Detective hat (Hat_of_the_Investigator) ID 5108
+lighthalzen.gat,140,68,4	script	Morris	804,{
+	mes "[Morris]";
+	mes "Do you want a ^FF3300Hat of the Investigator^000000?"; 
+	next;
+	menu "Of course, I do",-,"No, thanks",L_EXIT;
+
+	mes "[Morris]";
+	mes "Ok then, I shall make one for you.";
+
+	if (countitem(611)<10 || countitem(7301)<1887 || countitem(5120)<1 || Zeny<50000) goto L_NOITEM;//Items: Magnifier, Tassel, Fashionable_Fur_Hat,
+	mes "[Morris]";
+	mes "Very well. Now I can make it...";
+	next;
+	mes "[Morris]";
+	mes "Enjoy.";
+	delitem 611,10;   //Items: Magnifier,
+	delitem 7301,1887;  //Tassel//Items: Tassel,
+	delitem 5120,1;   //Items: Fashionable_Fur_Hat,
+	set Zeny,Zeny-50000;
+	getitem 5108,1;//Items: Detective_Hat,
+	close;
+
+L_NOITEM:
+	mes "[Morris]";
+	mes "Bring me:";
+	mes "^FF3300 10 Magnifiers^000000,";
+	mes "^FF3300 1887 Tassel^000000,";
+	mes "^FF3300 1 Wide Bunker Hat [1]^000000,";
+	mes "and ^FF3300 50,000 zeny.^000000";
+	close;
+
+L_EXIT:
+	mes "[Morris]";
+	mes "Bye.";
+	close;
+}
+
+//-------------------------------------------------------------------------------------------------
+//Red hood (Red Bonnet) ID 5109
+lighthalzen.gat,180,88,4	script	Rich Girl	864,{
+	mes "[Rich Girl]";
+	mes "Hello there! Please, answer my questions.";
+	next;
+	mes "[Rich Girl]";
+	mes "Do you have a grandma?";
+	emotion 20;
+	next;
+	mes "[Rich Girl]";
+	mes "Really? I'm sorry. Do you like wolves?";
+	next;
+	mes "[Rich Girl]";
+	mes "Ha! I knew it! And... my last question. Would you like to put on something reddish?";
+	emotion 1;
+	next;
+	mes "[Rich Girl]";
+	mes "Just kidding, Have you ever read 'Red-Hood'? I can make to you the very same ^FF3300Red Bonnet^000000.";
+	next;
+	menu "Please, make it!",-,"No, thanks",L_EXIT;
+	if ((countitem(10015) < 1) || (countitem(975) < 1) || (countitem(10007) < 1) || (countitem(5032)<1) || Zeny<50000) goto L_NOITEM;//Items: Green_Lace, Scarlet_Dyestuffs, Silk_Ribbon, Sunday_Hat,
+	mes "[Rich Girl]";
+	mes "Ok then, I shall make one for you.";
+	delitem 10015,1;//Items: Green_Lace,
+	delitem 975,1;//Items: Scarlet_Dyestuffs,
+	delitem 10007,1;//Items: Silk_Ribbon,
+	delitem 5032,1;//Items: Sunday_Hat,
+	getitem 5109,1;//Items: Red_Bonnet,
+	set Zeny,Zeny-50000;
+	next;
+	mes "[Rich Girl]";
+	mes "Now you can drink tea with your grannie and have fun with wolves.";
+	close;
+
+L_NOITEM:
+	mes "[Rich Girl]";
+	mes "Give me:";
+	mes "^FF3300 Green Lace^000000,";
+	mes "^FF3300 Scarlet Dyestuff ^000000,";
+	mes "^FF3300 Silk Ribbon^000000,";
+	mes "^FF3300 Sunday Hat ^000000,";
+	mes "and ^FF3300 50,000 zeny.^000000";
+	close;
+
+L_EXIT:
+	mes "[Rich Girl]";
+	mes "Well done. Bye.";
+	close;
+}
+
+//-------------------------------------------------------------------------------------------------
+//Mystic rose ID 5117
+lhz_in02.gat,105,21,4	script	Margaret Mary	838,{
+	mes "[Margaret Mary]";
+	mes "Wheee! Don't you just love making youself look pretty!?";
+	mes "I love glamourising myself with all the best accessories!";
+	next;
+
+	mes "[Margaret Mary]";
+	mes "Have you ever heard of a ^FF3300Mystic Rose^000000?";
+	mes "I can make you one, and you could be fashionable and mysticly, too!";
+	next;
+	menu "Make me a ^670000Mystic rose^000000.",-,"No, I dont want one.",L_EXIT;
+	
+	if ((countitem(731) < 10) || (countitem(748) < 3) || (countitem(982) < 1) || Zeny<50000) goto L_NOITEM;//Items: 2_Carat_Diamond, Witherless_Rose, White_Dyestuff,
+	mes "[Margaret Mary]";
+	mes "Wow, thank you! Hand me your items, please.";
+	delitem 731,10;//Items: 2_Carat_Diamond,
+	delitem 748,3;//Items: Witherless_Rose,
+	delitem 982,1;//Items: White_Dyestuff,
+	set Zeny,Zeny-50000;
+	getitem 5117,1;//Items: Mystic_Rose,
+	next;
+
+	mes "[Margaret Mary]";
+	mes "Enjoy being pretty and mystic!";
+	close;
+L_NOITEM:
+	mes "[Margaret Mary]";
+	mes "Well, for me to make you my Mystic rose...";
+	mes "I need these materials:";
+	mes "^FF3300 10 2-Carat Diamonds^000000,";
+	mes "^FF3300 3 Witherless Roses^000000,";
+	mes "^FF3300 1 White Dyestuff^000000,";
+	mes "and ^FF3300 50,000 zeny.^000000";
+	close;
+L_EXIT:
+	mes "[Margaret Mary]";
+	mes "Aww... well, OK then!";
+	mes "Be pretty some other time";
+	close;
+}
+
+
+//-------------------------------------------------------------------------------------------------
+//Well-Baked Toast ID 5107
+lighthalzen.gat,224,116,4	script	Juneau Cho	862,{
+	mes "[Juneau Cho]";
+	mes "Do you want ^FF3300 Well-Baked Toast ^000000?";
+	next;
+	menu "Please, make one for me",-,"No, thanks. I'm so full",L_EXIT;
+
+	if ((countitem(519) < 50) || (countitem(548) < 50) || (countitem(539) < 50) || (countitem(7031)<50)) goto L_NOITEM;//Items: Milk, Cheese, Piece_of_Cake, Old_Frying_Pan,
+	mes "[Juneau Cho]";
+	mes "Good, thank you! Let me just take your ingredients.";
+	delitem 519,50;//Items: Milk,
+	delitem 548,50;//Items: Cheese,
+	delitem 539,50;//Items: Piece_of_Cake,
+	delitem 7031,50;//Items: Old_Frying_Pan,
+	getitem 5107,1;//Items: Well_Done_Toast,
+	next;
+	mes "[Juneau Cho]";	
+	mes "Well done. Be careful, it's hot.";
+	close;
+
+L_NOITEM:
+	mes "[Juneau Cho]";
+	mes "Well, for me to make you ^FF3300 Well-Baked Toast ^000000...";
+	mes "I require these ingredients:";
+	mes "^FF3300 50 Milk, ^000000";
+	mes "^FF3300 50 Cheese, ^000000";
+	mes "^FF3300 50 Piece of Cake, ^000000";
+	mes "^FF3300 50 Old Frying Pan. ^000000";
+	close;
+L_EXIT:
+	mes "[Juneau Cho]";
+	mes "Ok. I get more tasty toast.";
+	close;
+	
+}
+
+einbroch.gat,70,200,4	script	Ganya	852,{
+	set @npcname$,"Ganya";
+	if(Event_Rose > 0) goto L_Hat;
+	if(countitem(749) > 0) goto L_Rose;
+	mes "[Ganya]";
+	mes "I miss my homeland.";
+	mes " ";
+	mes "If only I had a ^0000FFFrozen Rose^000000 like we used to have.";
+	close;
+
+L_Rose:
+	mes "[Ganya]";
+	mes "Oh- !";
+	mes " ";
+	mes "That is a Frozen Rose like we used to have in our garden!";
+	next;
+	mes "[Ganya]";
+	mes "Can I please have it?";
+	next;
+	menu "Da",L_Rose2,"Nyet",-;
+	mes "[Ganya]";
+	mes "You are quite the heartless one.";
+	close;
+
+L_Rose2:
+	delitem 749,1;
+	set Event_Rose,1;
+L_Hat:
+	callfunc "F_Russian_Hat";
+	close;
+}
+
+lighthalzen.gat,360,310,4	script	Baby	4023,{
+	mes "OMG Haxor!";
+	close;
+}
+lighthalzen.gat,360,310,4	script	Baby	111,{
+	set @npcname$,"Baby";
+	if(Event_Jelly > 0) goto L_MakeHat;
+	mes "[Baby]";
+	mes "Wan jelly!";
+	if(countitem(526)>0) goto L_Jelly;
+	close;
+
+L_Jelly:
+	next;
+	menu "Give royal jelly",L_Jelly2,"Don't",L_Cry;
+	close;
+
+L_Jelly2:
+	delitem 526,1;
+	mes "[Baby]";
+	mes "Th-anke...";
+	set Event_Jelly,1;
+	emotion 43;
+	next;
+
+L_MakeHat:
+	callfunc "F_BabySuckle";
+
+L_Cry:
+	mes "[Baby]";
+	mes "Waaah!";
+	emotion 28;
+	close;
+}
+
+yuno.gat,246,51,4	script	Old Blacksmith	813,{
+	set @npcname$,"Old Blacksmith";
+	set @sexname$,"fair lady";
+	if(sex==1) set @sexname$,"good man";
+L_Menu:
+	mes "[Old Blacksmith]";
+	mes "Well then my "+@sexname$+"!";
+	mes "What can I do for you?";
+	next;
+	menu "Angel Ears",L_AngelEar,
+		"Demon Ears",L_Demon,
+		"Nothing, thanks",-;
+	
+	mes "[Old Blacksmith]";
+	mes "Fair yee well!";
+	close;
+
+	L_AngelEar:
+	callfunc "F_AngelEar";
+	goto L_Menu;
+
+	L_Demon:
+	callfunc "F_DemonEar";
+	goto L_Menu;	
+}
+
+yuno.gat,353,282,7	script	Neris	806,{
+	set @npcname$,"Neris";
+	mes "[Neris]";
+	mes "I'm a hatmaker specializing in headgears modeled after those worn by monsters.";
+	next;
+L_Menu:
+	mes "[Neris]";
+	mes "So what can I do for you?";
+	menu "Big Golden Bell",L_Bell,
+		"Crown of Mistress",L_Mistress,
+		"Queen's Crown",L_IsisCrown,
+		"Nothing, thanks.",-;
+
+	mes "[Neris]";
+	mes "Bye! Come again.";
+	close;
+
+	L_Bell:
+	callfunc "F_GoldenBell";
+	goto L_Menu;
+
+	L_Mistress:
+	callfunc "F_MistressCrown";
+	goto L_Menu;
+
+	L_IsisCrown:
+	callfunc "F_QueenCrown";
+	goto L_Menu;
+}
+
+geffen.gat,128,148,6	script	Arjen	807,{ 
+	set @npcname$,"Arjen";
+	mes "[Arjen]";
+	mes "I specialize in quality head adornments.";
+	next;
+L_Menu:
+	mes "[Arjen]";
+	mes "What you interested in?";
+	next;
+	menu "X-Shaped Hairpin.",M_1,
+		"Bandage",M_2,
+		"Flower Hairpin.",M_3,
+		"Quit.",-;
+	close;
+
+	M_1:
+		callfunc "F_X_Pin";
+		goto L_Menu;
+	
+	M_2:
+		callfunc "F_Bandage";
+		goto L_Menu;
+
+	M_3:
+		callfunc "F_Flower";
+		goto L_Menu;
+
+	M_EXIT:
+		mes "[Arjen]";
+		mes "Okay, have a nice day!";
+		close;
+}
+
+prontera.gat,141,169,4	script	Tara	759,{
+	set @npcname$,"Tara";
+	mes "[Tara]";
+	mes "Hi, I'm the youngest and cutest of the 4 sisters that make the new headgears.";
+	next;
+L_Menu:
+	mes "[Tara]";
+	mes "Which hat would you like information on?";
+	next;
+	menu "Alarm Mask",L_Alarm,
+		"Assassin Mask",L_SinMask,
+		"Back Ribbon",L_Back,
+		"Bear Hat",L_Bear,
+		"Black Blindfold",L_Blindfold,
+		"Burning Blood Bandana",L_Blood,
+		"cancel",-;
+	close;
+
+	L_Blindfold:
+	callfunc "F_Black_Blindfold";
+	goto L_Menu;
+
+	L_Blood:
+	callfunc "F_Blood";
+	goto L_Menu;
+
+	L_Alarm:
+	callfunc "F_Alarm";
+	goto L_Menu;
+
+	L_Back:
+	callfunc "F_BackRibbon";
+	goto L_Menu;
+
+	L_Bear:
+	callfunc "F_BearHat";
+	goto L_Menu;
+
+	L_SinMask:
+	callfunc "F_SinMask";
+	goto L_Menu;
+}
+
+
+prontera.gat,142,170,4	script	Cara	726,{
+	set @npcname$,"Cara";
+	mes "[Cara]";
+	mes "...";
+	mes "Hi.";
+	mes "...";
+	mes "I'm the second youngest and shyest of the sisters that make the new headgears.";
+	next;
+L_Menu:
+	mes "[Cara]";
+	mes "Which hat would you like to talk about?";
+	next;
+	menu "Cat Ears",L_Ears,
+		"Cowboy Hat",L_Cowboy,
+		"Drooping Cat",L_Cat,
+		"Fox Mask",L_Fox,
+		"Fresh Bluish Fish",L_Fish,
+		"cancel",-;
+	close;
+
+	L_Cowboy:
+	callfunc "F_Cowboy";
+	goto L_Menu;
+
+	L_Cat:
+	callfunc "F_Drooping_Cat";
+	goto L_Menu;
+
+	L_Fish:
+	callfunc "F_Fish";
+	goto L_Menu;
+
+	L_Fox:
+	callfunc "F_Fox";
+	goto L_Menu;
+
+	L_Ears:
+	callfunc "F_CatEars";
+	goto L_Menu;
+
+}
+
+prontera.gat,143,171,4	script	Lara	724,{
+	set @npcname$,"Lara";
+	mes "[Lara]";
+	if (sex==0) goto L_Female;
+	mes "Hello handsome.";
+	mes "I'm the second oldest and sexiest of the sisters that make the new headgears.";
+	next;
+	mes "[Lara]";
+	mes "Which hat do you want, sweetie?";
+	next;
+	goto L_Menu2;
+
+L_Female:
+	mes "Hi, I'm the second oldest and sexiest of the sisters that make the new headgears.";
+	next;
+L_Menu:
+	mes "[Lara]";
+	mes "Which hat would you like to make?";
+	next;
+L_Menu2:
+	menu "Lazy Raccoon Hat",L_Raccoon,
+		"Mushroom Hat",L_Mushroom,
+		"Native's Headband",L_Native,
+		"Neko Mimi",L_Neko,
+		"Panda Hat",L_Panda,
+		"Party Hat",L_Party,
+		"Poring Hat",L_Poring,
+		"Posture Hat",L_Posture,
+		"cancel",-;
+	close;
+
+	L_Neko:
+	callfunc "F_Neko_Mimi";
+	goto L_Menu;
+
+	L_Panda:
+	callfunc "F_Panda";
+	goto L_Menu;
+
+	L_Poring:
+	callfunc "F_Poring";
+	goto L_Menu;
+
+	L_Native:
+	callfunc "F_Native";
+	goto L_Menu;
+
+	L_Party:
+	callfunc "F_Party";
+	goto L_Menu;
+
+	L_Posture:
+	callfunc "F_Posture";
+	goto L_Menu;
+
+	L_Nun:
+	callfunc "F_Nun";
+	goto L_Menu;
+
+	L_Mushroom:
+	callfunc "F_Mushroom";
+	goto L_Menu;
+
+	L_Raccoon:
+	callfunc "F_Raccoon";
+	goto L_Menu;
+}
+
+prontera.gat,144,172,4	script	Sara	816,{
+	set @npcname$,"Sara";
+	mes "[Sara]";
+	mes "Hello.";
+	mes "I'm the oldest and calmest of us four hat sisters.";
+	next;
+L_Menu:
+	mes "[Sara]";
+	mes "Which hat would you like?";
+	next;
+	menu "Sale Sign",L_Sale,
+		"Salvation Army Pin",L_Army,
+		"Sea Otter Hat",L_Otter,
+		"Sombrero",L_Sombrero,
+		"Straw Hat",L_Straw,
+		"Sunflower Pin",L_Sunflower,
+		"Transformation Leaf",L_Leaf,
+		"Tulip Hairpin",L_Tulip,
+		"Wool Hat",L_Wool,
+		"cancel",-;
+	close;
+
+	L_Sunflower:
+	callfunc "F_Sunflower_Pin";
+	goto L_Menu;
+
+	L_Sale:
+	callfunc "F_Sale_Sign";
+	goto L_Menu;
+
+	L_Wool:
+	callfunc "F_WoolHat";
+	goto L_Menu;
+
+	L_Sombrero:
+	callfunc "F_Sombrero";
+	goto L_Menu;
+
+	L_Straw:
+	callfunc "F_Straw";
+	goto L_Menu;
+
+	L_Army:
+	callfunc "F_ArmyPin";
+	goto L_Menu;
+
+	L_Otter:
+	callfunc "F_Otter";
+	goto L_Menu;
+
+	L_Leaf:
+	callfunc "F_Leaf";
+	goto L_Menu;
+
+	L_Tulip:
+	callfunc "F_Tulip";
+	goto L_Menu;
+}

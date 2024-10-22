@@ -1,0 +1,5 @@
+
+
+// Server name, use alternative character such as ASCII 160 for spaces.
+// NOTE: Do not use spaces in the name, or guild emblems won't work client-side!
+server_name: RWC Sakray

@@ -1,0 +1,35 @@
+
+
+//---------- Ragnarok Online Episode 13.1 ----------
+//----- Developer: --- Build Date: 
+//----- Build Num: Pre-Renewal
+
+//--------------------------------------------------------------------------------
+//     Hello!, I'm HVVQX! And thank you for downloading the RWC Sakray Server.
+//
+//     This a project of mine that I want to share others. With a help from the
+//     community and some friends I was able to setup my own offline server.
+//     The server is all about RWC - Ragnarok World Championships. People from
+//     Brazil inspire me to create this server and provide my personal inputs
+//     into action in-line with RWC rules that can be found over the internet.
+//
+//     I also play in Official Server under Renewal Mechanics. I hope you enjoy
+//     playing the RWC Sakray Server.
+//
+//     I don't own the server sofware. Credits to eAthena Development Team
+//
+//     HVVQX
+//--------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------
+//     Changelog
+//--------------------------------------------------------------------------------
+
+//----- r3
+//----- RWC Sakray Server Official Release
+
+//----- r2
+//----- Sakray Server Official Release
+
+//----- r1
+//----- Episode 13.1 Official Release

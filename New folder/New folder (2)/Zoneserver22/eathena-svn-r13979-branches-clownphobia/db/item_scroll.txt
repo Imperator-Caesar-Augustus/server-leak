@@ -1,0 +1,47 @@
+0,dummy,0
+5020,Kafra_Band                 ,20000
+5041,Heart_Hairpin              ,20000
+5062,Straw_Hat                  ,20000
+5006,Machoman_Glasses           ,20000
+5031,Miner's_Helmet             ,20000
+2260,Mini_Glasses               ,20000
+2217,Biretta_                   ,20000
+2223,Turban_                    ,20000
+2235,Crown                      ,20000
+2251,Holy_Bonnet                ,20000
+5011,Aerial                     ,20000
+5026,Chef_Hat                   ,20000
+5029,Spore_Hat                  ,20000
+5084,Lazy_Raccoon_Hat           ,20000
+5071,Indian_Headband            ,20000
+1306,War_Axe			,20000
+1137,Excalibur			,20000
+1170,Katzbalger			,20000
+1417,Pole_Axe			,20000
+1527,Quadrille			,20000
+1473,Wizardy_staff		,20000
+1963,Rapture_Rose		,20000
+1722,Ballista			,20000
+1472,Staff_of_Soul		,20000
+1467,Bill_Guisarme		,20000
+1469,Longinus's_Spear		,20000
+1470,Brionac			,20000
+2202,Sunglasses_		,20000
+2204,Glasses_			,20000
+2638,Exorcize_Sachet		,20000
+2639,Purification_Sachet	,20000
+1364,Great_Axe			,20000
+1369,Guillotine			,20000
+1415,Skewer			,20000
+1233,Excorssize			,20000
+1228,Combat_Knife		,20000
+2640,Kafra Ring			,20000
+5104,Black blindfold		,20000
+5099,Neko Mimi			,20000
+5108,Detective Hat		,20000
+5131,Close Helm			,20000
+1261,Loki's Talon		,20000
+1224,Swordbreaker		,20000
+1225,Mailbreaker		,20000
+5132,Angeling_HAt		,20000
+11500,Prize_Bag			,100000
